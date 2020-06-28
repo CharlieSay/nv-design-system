@@ -1,0 +1,102 @@
+@import "../../config/_config.scss";
+
+.header {
+  background-color: $nvBlack;
+  width: 100% !important;
+
+  .__desktop {
+    height: 80px;
+    display: -webkit-flex !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    max-width: 1600px;
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+
+    z-index: 1 !important;
+
+    &__content {
+      display: -webkit-flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .nav {
+        display: inherit;
+        align-items: inherit;
+
+        .__nav__link {
+          margin-left: 55px;
+        }
+      }
+      .hero {
+        display: inherit;
+        align-items: inherit;
+        a {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .__mobile {
+    display: flex;
+    justify-content: center;
+    z-index: 1 !important;
+    position: relative;
+    &__container {
+      display: -webkit-flex !important;
+      position: fixed;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+      width: 90%;
+      background-color: rgba(119, 101, 101, 0);
+      color: white;
+      .__nav-mobile {
+        display: block;
+        position: fixed; /* Stay in place */
+        z-index: 0; /* Sit on top */
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+        overflow-x: hidden; /* Disable horizontal scroll */
+        transition: 0.5s;
+        height: 100%;
+        width: 100%;
+        &__content {
+          display: -webkit-flex !important;
+          flex-direction: column;
+          padding-left: 5%;
+          padding-top: 70px;
+        }
+        &__logo {
+          z-index: 1;
+        }
+        &__title {
+          h1 {
+            margin-bottom: 0;
+            color: $nvGreen;
+            font-size: 30px;
+            @media (max-width: 320px) {
+              font-size: 20px;
+            }
+          }
+        }
+        &__sub {
+          display: flex;
+          flex-direction: column;
+          font-size: 16px;
+          @media (max-width: 320px) {
+            font-size: 10px;
+          }
+        }
+        &__divider {
+          margin-top: 20px;
+          border-top: 2px solid $nvWhite;
+          width: 95%;
+        }
+      }
+    }
+  }
+}

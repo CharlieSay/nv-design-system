@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../design-system/components/layout/footer/footer';
 import { action } from '@storybook/addon-actions';
 import { Button } from '@storybook/react/demo';
 
@@ -7,7 +8,7 @@ export default {
   component: Button,
 };
 
-export const Text = () => <h1>Vision</h1>;
+export const FooterStory = () => <Footer />;
 
 export const Emoji = () => (
   <Button onClick={action('clicked')}>

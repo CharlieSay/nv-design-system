@@ -1,0 +1,197 @@
+@import "../config/_config.scss";
+
+.o-page-align {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homepage {
+  &__hero__banner {
+    min-height: 550px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    &__image {
+      width: 60%;
+      height: 650px;
+      @media (min-width: 1600px) {
+        height: 800px;
+      }
+      @media (min-width: 1400px) {
+        height: 700px;
+      }
+      @media (max-width: 860px) {
+        width: 100%;
+        position: relative;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 80% 50%;
+      }
+    }
+    &__text {
+      display: inline-flex;
+      align-self: center;
+
+      color: $nvWhite;
+      width: 25%;
+      h1 {
+        font-size: 50px;
+        @media (max-width: 1140px) {
+          font-size: 40px;
+        }
+      }
+      span {
+        font-size: 20px;
+        @media (max-width: 1140px) {
+          font-size: 15px;
+        }
+      }
+      &__cta {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.home-section {
+  display: -webkit-flex !important;
+  padding-right: $nvBaseUnit*2;
+  padding-left: $nvBaseUnit*2;
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @media (max-width: 860px) {
+      padding-left: 0;
+      width: 100%;
+      justify-content: center;
+    }
+    &__text {
+      text-align: end;
+      display: -webkit-flex !important;
+      flex-direction: column;
+      align-items: flex-end;
+      align-self: center;
+      color: $nvBlack;
+      width: 100%;
+      @media (max-width: 860px) {
+        align-items: center;
+        text-align: center;
+        width: 90%;
+      }
+      h1 {
+        font-size: 45px;
+        line-height: 50px;
+      }
+      span {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+    &__cta {
+      width: 100%;
+      padding-top: $nvBaseUnit*2;
+      display: -webkit-flex !important;
+      justify-content: flex-end;
+      @media (max-width: 860px) {
+        justify-content: center;
+        width: 100%;
+        padding-bottom: $nvBaseUnit*2;
+      }
+    }
+    &__image {
+      display: inline-flex;
+      justify-content: flex-end;
+      width: 50%;
+      @media (max-width: 860px) {
+        width: 100%;
+        justify-content: center;
+        padding-top: $nvBaseUnit*2;
+      }
+      img {
+        @media (max-width: 860px) {
+          width: 250px;
+          height: 180px;
+        }
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-right: $nvBaseUnit*2;
+    @media (max-width: 860px) {
+      width: 100%;
+      justify-content: center;
+    }
+    &__text {
+      text-align: start;
+      display: -webkit-flex !important;
+      flex-direction: column;
+      align-items: flex-start;
+      align-self: center;
+      color: $nvBlack;
+      @media (max-width: 860px) {
+        align-items: center;
+        text-align: center;
+        width: 90%;
+      }
+      h1 {
+        font-size: 45px;
+        line-height: 50px;
+      }
+      span {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+    &__cta {
+      width: 100%;
+      padding-top: $nvBaseUnit*2;
+      display: -webkit-flex !important;
+      justify-content: flex-start;
+      @media (max-width: 860px) {
+        justify-content: center;
+        width: 100%;
+        padding-bottom: $nvBaseUnit*2;
+      }
+    }
+    &__image {
+      display: inline-flex;
+      justify-content: flex-end;
+      width: 50%;
+      @media (max-width: 860px) {
+        width: 100%;
+        justify-content: center;
+        padding-top: $nvBaseUnit*2;
+      }
+      img {
+        @media (max-width: 860px) {
+          width: 250px;
+          height: 180px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 860px) {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.content-by-type{
+span{
+width:50%;
+   display: inline-block;
+}
+}

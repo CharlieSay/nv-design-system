@@ -1,0 +1,47 @@
+@import '../../config/_config.scss';
+
+.footer__container {
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  justify-content: center;
+  background-color: $nvBlack;
+  color: $nvGreen;
+  font-family: "Droid";
+
+  width: 100%;
+}
+
+.footer__content {
+  margin: 0 auto;
+  padding: 2.5rem 0 2.5rem 0;
+  display: flex;
+  align-items: center;
+  &__desktop {
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 45px;
+    opacity: 50%;
+    &__content {
+      width: 200px;
+      display: flex;
+      justify-content: center;
+    }
+    &__socials {
+      width: 200px;
+      &__inner {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+
+  &__mobile {
+    width: 100%;
+    display:flex;
+    justify-content: center;    
+align-items: center;
+  }
+}

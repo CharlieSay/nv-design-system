@@ -1,0 +1,57 @@
+// ==========================================================================
+// Conversions
+// ==========================================================================
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@function pxtorem($px) {
+  @if $px == 0 {
+    @return 0;
+  }
+
+  @if type-of(px) == 'number' {
+    @return calculateRem($px);
+  } @else {
+    $rems: ();
+
+    @each $value in $px {
+      @if $value == 0 {
+        $rems: append($rems, $value);
+      } @else {
+        $rems: append($rems, calculateRem($value));
+      }
+    }
+
+    @return $rems;
+  }
+}
+
+@function calculateEm($size) {
+  $emSize: $size / 16px;
+  @return #{$emSize}em;
+}
+
+@function pxtoem($px) {
+  @if $px == 0 {
+    @return 0;
+  }
+
+  @if type-of(px) == 'number' {
+    @return calculateEm($px);
+  } @else {
+    $ems: ();
+
+    @each $value in $px {
+      @if $value == 0 {
+        $ems: append($ems, $value);
+      } @else {
+        $ems: append($ems, calculateEm($value));
+      }
+    }
+
+    @return $ems;
+  }
+}

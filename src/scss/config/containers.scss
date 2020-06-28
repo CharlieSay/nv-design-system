@@ -1,0 +1,40 @@
+@import './global-variables.scss';
+@import './conversions.scss';
+
+.nv-container {
+  display: block;
+  margin: 0 0 72px;
+  max-width: auto;
+  position: relative;
+
+  &--fixed-wide {
+    margin: 48px  auto 72px;
+    max-width: 1224px;
+
+    @media (min-width: pxtoem(640px)) {
+      margin: 48px auto 48px;
+    }
+
+    @media (min-width: (360px) + 16px*2) {
+      margin: 48px auto 48px;
+    }
+  }
+
+  &--constrained {
+    margin: 48px  24px 72px;
+    max-width: 1224px;
+
+    @media (min-width: pxtoem(640px)) {
+      margin: 48px 16px 48px;
+    }
+
+    @media (min-width: (360px) + 16px*2) {
+      margin: 48px auto 48px;
+    }
+  }
+
+  &--scrollable {
+    overflow-x: auto;
+    overflow-y: visible;
+  }
+}

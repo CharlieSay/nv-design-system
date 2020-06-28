@@ -1,0 +1,63 @@
+@import "../../config/_config.scss";
+
+.btn-container {
+  border-radius: 50px;
+  .primary {
+    background-color: $nvGreen;
+    transition: all 0.25s ease-out;
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+
+    &__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      height: 100%;
+      width: 100%;
+      span {
+        font-size: 24px;
+        font-weight: 700;
+        color: $nvBlack;
+      }
+    }
+  }
+
+  .secondary {
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+    -webkit-box-shadow: inset 0px 0px 0px 2px $nvGreen;
+    -moz-box-shadow: inset 0px 0px 0px 2px $nvGreen;
+    box-shadow: inset 0px 0px 0px 2px $nvGreen;
+
+    &__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      height: 100%;
+      width: 100%;
+      span {
+        font-size: 24px;
+        font-weight: 700;
+        color: $nvWhite;
+      }
+    }
+  }
+}
+
+.btn-container:hover {
+  cursor: pointer;
+  .primary {
+    background-color: $nvGreenDark;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.068);
+  }
+  .secondary {
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.068);
+    -webkit-box-shadow: 0;
+    -moz-box-shadow: 0;
+    box-shadow: 0;
+  }
+}

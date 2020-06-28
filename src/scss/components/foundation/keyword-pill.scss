@@ -1,0 +1,23 @@
+@import "../config";
+
+.keyword__group {
+  display: flex;
+  padding: 0.25em 0.4em;
+  margin-top: 4px;
+  font-size: 75%;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.45rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.keyword__pill {
+  color: #cccccc;
+  margin-left:6px;
+  border-radius: 7.5px;
+  padding: 1.5px;
+}

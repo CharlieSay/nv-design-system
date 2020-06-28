@@ -1,0 +1,50 @@
+@import "../../config/_config";
+
+.content-by-type {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    &__cluster {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        &__row {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.type-card-container {
+    width: 240px;
+    height: 130px;
+    margin: $nvBaseUnit $nvBaseUnit $nvBaseUnit $nvBaseUnit;
+    border-radius: 30px;
+    position: relative;
+    span {
+        color: $nvWhite;
+        text-align: center;
+        font-size: 15px;
+        position: absolute;
+        top: 55px;
+        right: 55px;
+    }
+    img {
+        border-radius: 30px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.type-card-container:hover {
+    img {
+        transition: all 0.25s;
+        filter: grayscale(70%);
+    }
+    span {
+        transition: all 0.25s;
+        color: $nvGreen;
+    }
+}

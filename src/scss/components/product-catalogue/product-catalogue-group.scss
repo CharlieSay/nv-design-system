@@ -1,0 +1,45 @@
+@import '../../config/_config.scss';
+
+.product__catalogue__group {
+  display: inline;
+  padding: 0;
+
+  &__item {
+    width: 326px;
+    float: left;
+    list-style: none;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+.product__catalogue__container {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 978px;
+
+  @media (max-width: 724px) {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  @media (min-width: 725px) and (max-width: 1223px) {
+    margin: 0 auto;
+  }
+}
+
+.product__catalogue__skeleton {
+  padding-bottom: $nvBaseUnit*3;
+}
+
+.product__catalogue__container__alignment {
+  padding: 0 auto;
+}
+
+.loading__context {
+  width: 100%;
+  margin: auto;
+}

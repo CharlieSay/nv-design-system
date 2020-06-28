@@ -1,0 +1,52 @@
+@import '../../config/_config.scss';
+
+.product__card {
+  text-decoration: none;
+  max-width: 306px;
+  color: $nvBlack;
+  &__container {
+    background-color: $nvWhite;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.1);
+    margin: 0 0 $nvBaseUnit*3;
+    padding: 0 0 $nvBaseUnit;
+    overflow: hidden;
+    border-radius: $nvBaseUnit;
+    padding: $nvBaseUnit;
+    width: 290px;
+    height: 210px;
+  }
+
+  &__thumbnail {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    img {
+      overflow: hidden;
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $nvBaseUnit*2;
+
+    &__length {
+      padding-top: 5px;
+      font-size: 12px;
+    }
+
+    &__views {
+      font-size: 8px;
+      padding-top: 5px;
+      font-style: italic;
+    }
+  }
+}

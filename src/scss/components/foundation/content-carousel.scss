@@ -1,0 +1,130 @@
+@import '../../config/_config.scss';
+
+.carousel__container {
+  max-width: 1300px;
+
+  @media (max-width: 1300px) {
+    max-width: 900px;
+  }
+  @media (max-width: 900px) {
+    max-width: 600px;
+  }
+  @media (max-width: 600px) {
+    max-width: 450px;
+  }
+  @media (max-width: 450px) {
+    max-width: 350px;
+  }
+  @media (max-width: 350px) {
+    max-width: 300px;
+  }
+}
+
+.content__card {
+  padding-left: 20px;
+}
+
+.carousel__results {
+  &__list {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0 0 0 1px;
+    list-style-type: none;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scroll-snap-type: x mandatory;
+
+    > [class^="strip-results__list-item"] {
+      scroll-snap-align: start;
+    }
+  }
+
+  &__skeleton {
+    max-width: 100%;
+    width: 100%;
+    min-height: 304px;
+    display: block;
+    animation-name: pulse;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+  }
+
+  &__list-item--3,
+  &__list-item--2,
+  &__list-item--4 {
+    position: relative;
+    margin: $nvBaseUnit 0 $nvBaseUnit 4.3%;
+    width: 90%;
+    flex: 0 0 90%;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__list-item--4 {
+    min-width: 224px;
+    max-width: 288px;
+  }
+
+  .o-page-align--mob-breakout & {
+    .strip-results__list li {
+      box-sizing: content-box;
+      padding-left: 4.3%;
+      margin-left: 0;
+
+      &:last-of-type {
+        padding-right: 4.3%;
+      }
+
+      @media (min-width: "414px") {
+        padding-left: 3.5%;
+
+        &:last-of-type {
+          padding-right: 3.5%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: "414px") {
+  .strip-results {
+    &__list--centre {
+      justify-content: center;
+    }
+
+    &__list-item {
+      &--3 {
+        width: 45.3%;
+        flex: 0 0 45.3%;
+        margin: ($nvBaseUnit * 2) $nvBaseUnit ($nvBaseUnit * 2) 1.5%;
+      }
+
+      &--4,
+      &--2 {
+        width: 45.3%;
+        flex: initial;
+        margin: ($nvBaseUnit * 2) 0 ($nvBaseUnit * 2) 3.5%;
+      }
+
+      &--4 {
+        flex: 0 0 45.3%;
+      }
+    }
+
+    .o-page-align--mob-breakout & {
+      &__list-item--3,
+      &__list-item--2,
+      &__list-item--4 {
+        &:first-child {
+          margin-left: $nvBaseUnit*2;
+        }
+      }
+    }
+  }
+}
